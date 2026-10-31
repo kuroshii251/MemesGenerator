@@ -4,6 +4,9 @@ import './App.css'
 import Hero from './component/home/hero'
 import Navbar from './component/home/navbar'
 import sound from "./assets/sound.mp3";
+import Feature from './component/home/feature';
+import Faq from './component/home/faq';
+import Footer from './component/home/footer';
 
 function App() {
   const [soundMute, setSoundMute] = useState(false);
@@ -14,7 +17,7 @@ const soundCreppy = new Audio(sound);
 
     } else {
       setSoundMute(soundMute);
-
+      soundCreppy.play(); 
     }
   }
 
@@ -30,6 +33,9 @@ const soundCreppy = new Audio(sound);
       </div>
     </div>
     <Hero/>
+    <Feature/>
+    <Faq/>
+    <Footer/>
     </>
   )
 }
