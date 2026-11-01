@@ -1,4 +1,4 @@
-export default function Featured() {
+export default function Feature() {
     return (
         <>
         <div className="flex-1 justify-center items-center h-screen">

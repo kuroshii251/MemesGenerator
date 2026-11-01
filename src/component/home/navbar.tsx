@@ -20,7 +20,7 @@ export default function Navbar(){
                         <a href="/" className="text-white font-semibold">Home</a>
                     </li>
                     <li>
-                        <a href="/image-meme-generator" className="text-white font-semibold">Meme Generator</a>
+                        <a href="/meme-generator" className="text-white font-semibold">Meme Generator</a>
                     </li>
                     <li>
                         <a href="/sticker-generator" className="text-white font-semibold">Sticker Generator</a>

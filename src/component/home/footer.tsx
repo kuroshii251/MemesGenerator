@@ -14,7 +14,7 @@ export default function Footer(){
                             <a href="/" className="font-semibold text-sm">Home</a>
                         </li>
                         <li>
-                            <a href="/image-meme-generator" className="font-semibold text-sm">Meme Generator</a>
+                            <a href="/meme-generator" className="font-semibold text-sm">Meme Generator</a>
                         </li>
                         <li>
                             <a href="/sticker-generator" className="font-semibold text-sm">Sticker Generator</a>
