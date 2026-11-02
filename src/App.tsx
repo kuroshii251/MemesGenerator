@@ -1,5 +1,5 @@
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import './App.css'
 import Hero from './component/home/hero'
 import Navbar from './component/home/navbar'
@@ -8,16 +8,19 @@ import Feature from './component/home/feature';
 import Faq from './component/home/faq';
 import Footer from './component/home/footer';
 
-function App() {
-  const [soundMute, setSoundMute] = useState(false);
-const soundCreppy = new Audio(sound);
-  const handleSound = () => {
-    if(soundCreppy){
-    soundCreppy.play(); 
 
+function App() {
+  const soundCreppy = useRef(new Audio(sound));
+  const [soundMute, setSoundMute] = useState("");
+  const handleSound = () => {
+    
+    if(soundCreppy.current.paused){
+      soundCreppy.current.play();
+      setSoundMute(true);
     } else {
-      setSoundMute(soundMute);
-      soundCreppy.play(); 
+      soundCreppy.current.pause();
+      setSoundMute(false);
+
     }
   }
 
@@ -26,9 +29,9 @@ const soundCreppy = new Audio(sound);
     <>
     <Navbar/> 
     <div className="fixed p-3">
-      <div className="bg-white p-3 w-full rounded-full">
+      <div className="bg-orange-500 p-3 w-full rounded-full">
         <button onClick={handleSound} className='cursor-pointer'>
-          <i className={`fa-solid text-black ${soundMute ? "fa-volume-xmark" : "fa-volume "}`}></i>
+          <i className={`fa-solid text-black ${soundMute ? "fa-volume" : "fa-volume-xmark"}`}></i>
         </button>
       </div>
     </div>

@@ -3,3 +3,15 @@
 body {
     background-color: black;
 }
+
+.creepster {
+    font-family: "Creepster", system-ui;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}

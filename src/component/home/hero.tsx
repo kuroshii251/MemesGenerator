@@ -1,26 +1,29 @@
 import pumpkin from "../../assets/pumpkin.png"
-import bat1 from "../../assets/bat1.png";
-import bat2 from "../../assets/bat2.png";
+import pumpkin2 from "../../assets/pumpkin1.png"
+
 
 export default function Hero(){
     return (
         <>
         <div className="flex justify-center items-center h-screen">
-            <div className="">
-                 <img src={bat1} width={120} height={120} className="absolute top-30 right-30" />
-                     <img src={bat2} width={120} height={120} className="absolute top-30 left-30" />
-            </div>
-                <div className="col space-y-8">
-                    <h1 className="text-orange-400 font-bold mx-auto text-center w-180 text-7xl">Generate Your Meme From Templates</h1>
-                    <p className="text-orange-100    w-200 text-center">Meme generator is a website which user can create meme from the templates.</p>
-                    <div className="flex items-center justify-center">
-                        <div className="col inline-block relative ">
-                       <img src={pumpkin} width={25} height={25} className="absolute -top-5 -right-3" alt="" />
-                        <a href="#featured" className="text-center font-semibold bg-orange-700 border border-black text-white hover:border hover:border-white hover:bg-black hover:text-white p-3 w-auto rounded-lg ">Get Started</a>
-                        </div>  
+      <div className="grid grid-cols-2 justify-center place-items-center align-items-center" >
+                <div className="col space-y-8 align-items-center justify-between">
+                    <h1 className="text-orange-400 creepster font-bold w-100 text-5xl">Make Everyone Laugh By Your Meme</h1>
+                    <p className="text-orange-100 poppins w-120 text-lg">Create memes in a seconds, pick a template and add your own text to the memes template</p>
+                    <div className="col relative inline-block">
+                    <a href="#featured" className=" font-semibold bg-orange-700 border text-white poppins border-black hover:border-2 hover:border-orange-500 hover:bg-black hover:text-white p-3 w-auto rounded-lg ">Get Started</a>
+                    <img src={pumpkin2} width={30} height={30} className="absolute -top-5 -right-3 " alt="" />
                     </div>
                 </div>
+                <div className="flex flex-col justify-between">
+                    <img src={pumpkin} className="w-120 mx-auto align-items-center" alt="" />
+                </div>
+                <div>
+                    <h1>tesss</h1>
+                </div>
         </div>
+        </div>
+
         </>
     )
 }

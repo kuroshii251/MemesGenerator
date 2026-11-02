@@ -13,7 +13,6 @@ export default function Templates1Page() {
         alert("You have reached the word limit");
     } else if(text2.length === 105){
         alert("You have reached the word limit");
-
     }
 
     const handleDownload =  () => {
@@ -43,28 +42,26 @@ export default function Templates1Page() {
                     <img src={templates1} className="w-100 h-100" alt="" />
                 </div>
                 <div className="">
-                    <div className="col bg-orange-700 p-3 w-100 h-100">
-                        <div className="flex flex-1 align-items-center items-center justify-center">
+                    <div className="col bg-zinc-900 p-3 w-100 h-100 rounded-lg">
+                        <div className="flex flex-1 h-80 align-items-center items-center justify-center">
                              <form action="" method="POST">
                             <div className="">
-                            <p className="font-semibold">Text 1</p>
-                            <input type="text" onChange={(e) => setText1(e.target.value)} className="shadow shadow-black text-black rounded-lg p-3 w-70" />
+                            <p className="font-semibold text-white text-2 mb-3">Text 1</p>
+                            <input type="text" onChange={(e) => setText1(e.target.value)} className="shadow shadow-black bg-white hover:ring-black text-black rounded-lg p-3 w-70" />
                             </div>
                             <div className="mt-5">
-                                <p className="font-semibold ">Text 2</p>
-                             <input type="text" onChange={(e) => setText2(e.target.value)} className="shadow shadow-black text-black rounded-lg p-3 w-70"/>
+                                <p className="font-semibold mb-3 text-white ">Text 2</p>
+                             <input type="text" onChange={(e) => setText2(e.target.value)} className="shadow shadow-black bg-white text-black rounded-lg p-3 w-70 hover:ring-black"/>
+                            </div>
+                              <div className="mt-3">
+                            <button className="text-white border-2 border-blue-300 p-3 rounded-lg font-semibold" onClick={handleDownload}>Download</button>
                             </div>
                         </form>
                         </div>               
-                        <div className="mt-12">
-                            <button className="text-white mx-auto flex flex-1 bg-black p-3 rounded-lg font-semibold" onClick={handleDownload}>Download</button>
-                            </div>
                     </div>
-                   
-
                 </div>
+                
             </div>
-
         </div>
 
         <Footer/>
