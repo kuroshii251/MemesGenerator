@@ -9,11 +9,11 @@ export default function Faq(){
     }, {
         id: 2,
         question: "How to use Memes Generator?",
-        answers: "I don't know bruh",
+        answers: "It's easy to use, first, navigate to meme generator's page, and choose the templates what you want, and then click edit template, add your own text, and then download the edited meme.",
     }, {
         id: 3, 
     question: "Is meme generator is free?",
-    answers: "Yes, meme generator is free, you can find and edit any memes templates into your own meme."
+    answers: "Yes, meme generator is free, you can find and edit any memes templates into your own meme."   
     }
 ];
 
