@@ -35,6 +35,22 @@ import Templates29Page from './pages/memesgenerator/templates/templates29.tsx'
 import Templates28Page from './pages/memesgenerator/templates/templates28.tsx'
 import Templates27Page from './pages/memesgenerator/templates/templates27.tsx'
 import Templates26Page from './pages/memesgenerator/templates/templates26.tsx'
+import StickerGeneratorPage from './pages/stickergenerator/main.tsx'
+import StickerTemplates1 from './pages/stickergenerator/list-templates/templates1.tsx'
+import StickerTemplates2 from './pages/stickergenerator/list-templates/templates2.tsx'
+import StickerTemplates3 from './pages/stickergenerator/list-templates/templates3.tsx'
+import StickerTemplates4 from './pages/stickergenerator/list-templates/templates4.tsx'
+import StickerTemplates5 from './pages/stickergenerator/list-templates/templates5.tsx'
+import StickerTemplates6 from './pages/stickergenerator/list-templates/templates6.tsx'
+import StickerTemplates7 from './pages/stickergenerator/list-templates/templates7.tsx'
+import StickerTemplates8 from './pages/stickergenerator/list-templates/templates8.tsx'
+import StickerTemplates9 from './pages/stickergenerator/list-templates/templates9.tsx'
+import StickerTemplates10 from './pages/stickergenerator/list-templates/templates10.tsx'
+import StickerTemplates11 from './pages/stickergenerator/list-templates/templates11.tsx'
+import StickerTemplates15 from './pages/stickergenerator/list-templates/templates15.tsx'
+import StickerTemplates14 from './pages/stickergenerator/list-templates/templates14.tsx'
+import StickerTemplates13 from './pages/stickergenerator/list-templates/templates13.tsx'
+import StickerTemplates12 from './pages/stickergenerator/list-templates/templates12.tsx'
 
 
 
@@ -74,10 +90,23 @@ createRoot(document.getElementById('root')!).render(
       <Route path='/meme-generator/28' element={<Templates28Page/>} />
       <Route path='/meme-generator/29' element={<Templates29Page/>} />
       <Route path='/meme-generator/30' element={<Templates30Page/>} />
-
-      
       <Route path='/error' element={<ErrorPage/>}/>
-
+      <Route path='/sticker-generator/' element={<StickerGeneratorPage/>}/>
+      <Route path='/sticker-generator/1' element={<StickerTemplates1/>} />
+      <Route path='/sticker-generator/2' element={<StickerTemplates2/>} />
+      <Route path='/sticker-generator/3' element={<StickerTemplates3/>} />
+      <Route path='/sticker-generator/4' element={<StickerTemplates4/>} />
+      <Route path='/sticker-generator/5' element={<StickerTemplates5/>} />
+      <Route path='/sticker-generator/6' element={<StickerTemplates6/>} />
+      <Route path='/sticker-generator/7' element={<StickerTemplates7/>} />
+      <Route path='/sticker-generator/8' element={<StickerTemplates8/>} />
+      <Route path='/sticker-generator/9' element={<StickerTemplates9/>} />
+      <Route path='/sticker-generator/10' element={<StickerTemplates10/>} />
+      <Route path='/sticker-generator/11' element={<StickerTemplates11/>} />
+      <Route path='/sticker-generator/12' element={<StickerTemplates12/>} />
+      <Route path='/sticker-generator/13' element={<StickerTemplates13/>} />
+      <Route path='/sticker-generator/14' element={<StickerTemplates14/>} />
+      <Route path='/sticker-generator/15' element={<StickerTemplates15/>} />
 
 
 
