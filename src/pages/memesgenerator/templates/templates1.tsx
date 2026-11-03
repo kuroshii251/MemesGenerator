@@ -22,8 +22,11 @@ export default function Templates1Page() {
             url.download = "memes.png";
             url.href= dataImage;
             url.click();
+            window.location.reload();
         }) .catch((err) => {
             console.error("Error", err);
+            window.location.href="/error";
+
         });
     };
 
@@ -42,7 +45,7 @@ export default function Templates1Page() {
                     <img src={templates1} className="w-100 h-100" alt="" />
                 </div>
                 <div className="">
-                    <div className="col bg-zinc-900 p-3 w-100 h-100 rounded-lg">
+                    <div className="col bg-zinc-950 p-3 w-100 h-100 rounded-lg">
                         <div className="flex flex-1 h-80 align-items-center items-center justify-center">
                              <form action="" method="POST">
                             <div className="">
@@ -53,8 +56,8 @@ export default function Templates1Page() {
                                 <p className="font-semibold mb-3 text-white ">Text 2</p>
                              <input type="text" onChange={(e) => setText2(e.target.value)} className="shadow shadow-black bg-white text-black rounded-lg p-3 w-70 hover:ring-black"/>
                             </div>
-                              <div className="mt-3">
-                            <button className="text-white border-2 border-blue-300 p-3 rounded-lg font-semibold" onClick={handleDownload}>Download</button>
+                              <div className="pt-7">
+                            <button className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
                             </div>
                         </form>
                         </div>               
@@ -63,7 +66,6 @@ export default function Templates1Page() {
                 
             </div>
         </div>
-
         <Footer/>
         
         </>

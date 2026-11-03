@@ -27,7 +27,6 @@ const handleAccordions = (id) => {
             <p className="text-xl text-orange-500 font-semibold text-center">Frequently Ask Question</p>
             <div className="flex flex-col justify-center pt-10  mx-auto items-center">
                 {dataQnA.map((items) => (
-                    <>
  <div className="p-5 bg-orange-700 rounded-md w-150 border-2 border-b-black" key={items.id}>
                 <div className="flex justify-between items-center">
                     <p className="font-semibold">{items.question}</p>
@@ -44,7 +43,6 @@ const handleAccordions = (id) => {
 }    </p>
                 </div>
             </div>
-            </>
                 ))}
             
             </div>

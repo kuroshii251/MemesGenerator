@@ -11,9 +11,9 @@ export default function Feature() {
                     <h1 className="font-bold text-2xl text-orange-500 font-bold text-center pt-7">Memes Image Generator</h1>
                     <p className="pt-6 p-7 text-center font-semibold text-white">Create Meme from the template</p>
                     <div className="">
-                    <a href="/meme-image-generator" className="bg-black mx-auto border-2 border-orange-500 text-center flex justify-center font-semibold text-white w-50 rounded-lg p-3">Start Create</a>
+                    <a href="/meme-generator" className="bg-black mx-auto border-2 border-orange-500 text-center flex justify-center font-semibold text-white w-50 rounded-lg p-3">Start Create</a>
                     </div>
-                </div>
+                </div>  
                  <div className="bg-black border-2 border-orange-500 w-100 p-5 rounded-lg h-80  ">
                     <div className="flex justify-center w-40 h-20 mx-auto">
                         <i className="fa-solid fa-note-sticky text-orange-500 text-5xl pt-3 align-items-center flex justify-center"></i>

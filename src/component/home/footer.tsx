@@ -5,7 +5,7 @@ export default function Footer(){
         <>
         <div className="col pt-30">
    <div className=" w-full pt-10 bg-zinc-950 h-70">
-            <img src={spider} className="-right-0 top-453  absolute w-50 h-50" alt="" />
+            <img src={spider} className="-right-0 top-349  absolute w-50 h-50" alt="" />
             <div className="grid grid-cols-2 place-items-center">
                 <div className="">
                 <h1 className="font-bold text-3xl text-orange-500">MemesGenerator</h1>
