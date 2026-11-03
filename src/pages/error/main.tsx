@@ -6,10 +6,11 @@ export default function ErrorPage(){
         <>
         <Navbar/>
         
-        <div className="flex justify-center items-center p-5 min-h-screen">
+        <div className="flex justify-center items-center p-5 h-100">
             <div className="space-y-5">
-                <h1 className="text-7xl font-bold text-center text-white">404</h1>
-                <p className="text-white text-center w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla blanditiis repellendus et, cupiditate quos, iure atque molestias cumque architecto ab in provident illum dignissimos ad adipisci modi minus rem voluptatum.</p>
+                <h1 className="text-9xl font-bold text-center text-white">404</h1>
+                <p className="text-white text-center text-2xl poppins w-100">Page Not Found</p>
+                <p></p>
                 <a href="/" className="bg-orange-500 p-3 flex justify-center w-50 rounded-md hover:bg-orange-600 mx-auto font-semibold">Back</a>
             </div>
 

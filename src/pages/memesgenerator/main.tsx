@@ -66,7 +66,6 @@ export default function MemeGeneratorPage(){
         { id: 28, image: template28, link: "/meme-generator/28"},
         { id: 29, image: template29, link: "/meme-generator/29"},
         { id: 30, image: template30, link: "/meme-generator/30"},
-
     ];
 
     return (
@@ -74,7 +73,7 @@ export default function MemeGeneratorPage(){
         <Navbar/>
         <div className="justify-center items-center min-h-screen">
             <h1 className="text-3xl text-white text-center font-bold pt-10 pb-5">Meme Generator</h1>
-            <p className="text-white w-150 mx-auto pb-20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae provident voluptatibus quis architecto, dolorem doloribus est, libero quia velit aliquam sunt nostrum corporis magnam eveniet explicabo dolor suscipit debitis fugiat! </p>
+            <p className="text-white text-lg flex justify-center w-150 mx-auto pb-20">Find the best meme templates for your content</p>
             <div className="grid grid-cols-3 space-x-5 space-y-5 place-items-center">
                {memeList.map((items) => (
                 <div className="" key={items.id}>
