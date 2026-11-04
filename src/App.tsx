@@ -11,7 +11,7 @@ import Footer from './component/home/footer';
 
 function App() {
   const soundCreppy = useRef(new Audio(sound));
-  const [soundMute, setSoundMute] = useState("");
+  const [soundMute, setSoundMute] = useState<boolean>(false);
   const handleSound = () => {
     
     if(soundCreppy.current.paused){

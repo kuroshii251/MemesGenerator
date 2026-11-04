@@ -33,7 +33,7 @@ export default function StickerTemplates11() {
                 <div className="col relative" ref={stickerPhoto}>
          
              <div className="bg-white h-100 w-100">
-                <h1 className="w-100 p-5 break-all text-7xl">{text}</h1>
+                <h1 className="w-100 p-5 break-all text-7xl">{text|| "Text"}</h1>
 
              </div>
                 </div>

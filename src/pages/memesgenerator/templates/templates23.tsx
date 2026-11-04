@@ -34,14 +34,14 @@ export default function Templates23Page() {
     return (
         <>
         <Navbar/>
-        <div className="justify-between items-center flex h-screen">
-            <div className="col lg:flex flex-1 justify-center gap-10 items-center">
+         <div className="justify-between items-center flex min-h-screen">
+            <div className="flex flex-col lg:flex-row flex-1 justify-center gap-10 items-center">
                 <div className="col relative" ref={imageRef}>
                     <div className="absolute left-4 top-32">
-                <p className="max-w-18 break-all  font-semibold text-sm">{text1}</p>
+                <p className="max-w-18 break-all  font-semibold text-sm">{text1|| "Text"}</p>
              </div>
              <div className="absolute left-31 top-32">
-                <p className="max-w-18 text-sm font-semibold break-all">{text2}</p>
+                <p className="max-w-18 text-sm font-semibold break-all">{text2|| "Text"}</p>
              </div>
                
                     <img src={templates23} className="h-100" alt="" />

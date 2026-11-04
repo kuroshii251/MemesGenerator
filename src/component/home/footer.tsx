@@ -1,17 +1,15 @@
-import spider from "../../assets/spider.png";
 
 export default function Footer(){
     return (
         <>
         <div className="col pt-30">
-   <div className=" w-full pt-10 bg-zinc-950 h-70">
-            <img src={spider} className="-right-0 top-349  absolute w-50 h-50" alt="" />
-            <div className="grid grid-cols-2 place-items-center">
+   <div className=" w-full pt-10 bg-zinc-950 h-auto">
+            <div className="grid lg:grid-cols-2 grid-cols-1 space-y-10  lg:place-items-center p-5">
                 <div className="">
                 <h1 className="font-bold text-3xl text-orange-500">MemesGenerator</h1>
                 <p className="font-normal poppins text-sm text-white w-100">Meme generator is a website which user can create meme from the templates.</p>
                 </div>
-                <div className="col p-3">
+                <div className="col lg:p-3">
                     <h1 className="font-bold text-orange-500 text-xl">Menu</h1>
                     <ul>
                         <li>
@@ -29,7 +27,14 @@ export default function Footer(){
                         </li>
                     </ul>
                 </div>
+                 
+              
             </div>
+             <div className="flex justify-center pt-10 items-center align-items-center p-3">
+                <p className="text-white text-center mx-auto justify-center pl-0 font-semibold">Copyright @2026 by Kuro</p>
+            </div>
+            
+            
         </div>
         </div>
      

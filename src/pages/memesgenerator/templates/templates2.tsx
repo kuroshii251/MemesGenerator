@@ -46,19 +46,19 @@ export default function Templates2Page() {
             <div className="flex flex-col lg:flex-row flex-1 justify-center gap-10 items-center">
                 <div className="col max-w-[400px] relative" ref={imageRef}>
              <div className="absolute left-42 top-3 ">
-                <h1 className="w-40  font-semibold break-all text-xl">{text1}</h1>
+                <h1 className="w-40  font-semibold break-all text-xl">{text1 || "Text"}</h1>
              </div>
                <div className="absolute left-42 top-27">
-                <h1 className="max-w-40 break-all font-semibold text-xl">{text2}</h1>
+                <h1 className="max-w-40 break-all font-semibold text-xl">{text2 || "Text"}</h1>
              </div>
              <div className="absolute left-42 top-52">
-                <h1 className="max-w-40 break-all font-semibold text-xl">{text3}</h1>
+                <h1 className="max-w-40 break-all font-semibold text-xl">{text3 || "Text"}</h1>
              </div>
              <div className="absolute left-42 top-80">
-                <h1 className="max-w-40 break-all font-semibold text-xl">{text4}</h1>
+                <h1 className="max-w-40 break-all font-semibold text-xl">{text4 || "Text"}</h1>
              </div>
              <div className="absolute left-42 top-105">
-                <h1 className="max-w-40 break-all font-semibold text-xl">{text5}</h1>
+                <h1 className="max-w-40 break-all font-semibold text-xl">{text5 || "Text"}</h1>
              </div>
              <div className="mx-auto">
                     <img src={templates2} className="h-130 block" alt="" />

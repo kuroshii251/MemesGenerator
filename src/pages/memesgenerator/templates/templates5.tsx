@@ -35,8 +35,8 @@ export default function Templates5Page() {
     return (
         <>
         <Navbar/>
-        <div className="justify-between items-center flex h-screen">
-            <div className="col lg:flex flex-1 justify-center gap-10 items-center">
+       <div className="justify-between items-center flex min-h-screen">
+            <div className="flex flex-col lg:flex-row flex-1 justify-center gap-10 items-center">
                 <div className="col relative" ref={imageRef}>
              <div className="absolute left-5 top-5">
                 <h3 className="w-120 font-extrabold break-all text-3xl">{text1}</h3>
@@ -44,7 +44,7 @@ export default function Templates5Page() {
                <div className="absolute left-5 top-80">
                 <h3 className="max-w-120 break-all font-extrabold text-3xl">{text2}</h3>
              </div>
-                    <img src={templates5} className=" h-100" alt="" />
+                    <img src={templates5} className=" h-100 p-5" alt="" />
                 </div>
                 <div className="">
                     <div className="col bg-zinc-950 p-3 w-100 h-100 rounded-lg">

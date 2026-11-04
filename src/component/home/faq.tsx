@@ -22,12 +22,12 @@ const handleAccordions = (id) => {
 }
     return (
         <>
-        <div className="flex-1 justify-center items-center h-auto">
+        <div className="flex-1 justify-center items-center pt-50">
             <h1 className="font-bold text-6xl text-center text-orange-500">FAQ</h1>
             <p className="text-xl text-orange-500 font-semibold text-center">Frequently Ask Question</p>
             <div className="flex flex-col justify-center pt-10  mx-auto items-center">
                 {dataQnA.map((items) => (
- <div className="p-5 bg-orange-700 rounded-md w-150 border-2 border-b-black" key={items.id}>
+ <div className="p-5 bg-orange-700 rounded-md lg:w-150 w-100 border-2 border-b-black" key={items.id}>
                 <div className="flex justify-between items-center">
                     <p className="font-semibold">{items.question}</p>
                 <button className="cursor-pointer" onClick={() => handleAccordions(items.id)}>

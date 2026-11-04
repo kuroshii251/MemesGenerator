@@ -41,14 +41,14 @@ export default function Templates6Page() {
     return (
         <>
         <Navbar/>
-        <div className="justify-between items-center flex h-screen">
-            <div className="col lg:flex flex-1 justify-center gap-10 items-center">
+        <div className="justify-between items-center flex min-h-screen">
+            <div className="flex flex-col lg:flex-row flex-1 justify-center gap-10 items-center">
                 <div className="col relative" ref={imageRef}>
              <div className="absolute left-15 top-35">
-                <h3 className="w-40  font-extrabold break-all text-xl">{text1}</h3>
+                <h3 className="w-40  font-extrabold break-all text-xl">{text1|| "Text"}</h3>
              </div>
                <div className="absolute left-35 top-10">
-                <h3 className="max-w-40 break-all font-extrabold text-xl">{text2}</h3>
+                <h3 className="max-w-40 break-all font-extrabold text-xl">{text2|| "Text"}</h3>
              </div>
 
                <div className="absolute left-65 top-18">

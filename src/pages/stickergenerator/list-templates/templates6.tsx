@@ -33,7 +33,7 @@ export default function StickerTemplates6() {
             <div className="flex flex-1 flex-col space-y-10 justify-center items-center">
                 <div className="col relative" ref={stickerPhoto}>
              <div className="absolute left-60 top-3  ">
-                <h1 className="w-30  font-bold break-all text-xl">{text}</h1>
+                <h1 className="w-30  font-bold break-all text-xl">{text|| "Text"}</h1>
              </div>
                     <img src={templates6} className="h-100" alt="" />
                 </div>

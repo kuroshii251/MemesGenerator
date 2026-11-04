@@ -34,14 +34,14 @@ export default function Templates26Page() {
     return (
         <>
         <Navbar/>
-        <div className="justify-between items-center flex h-screen">
-            <div className="col lg:flex flex-1 justify-center gap-10 items-center">
+   <div className="justify-between items-center flex min-h-screen">
+            <div className="flex flex-col lg:flex-row flex-1 justify-center gap-10 items-center">
                 <div className="col relative" ref={imageRef}>
                     <div className="absolute left-1 top-1">
-                <h1 className="max-w-45 break-all  font-semibold text-2xl">{text1}</h1>
+                <h1 className="max-w-45 break-all  font-semibold text-2xl">{text1|| "Text"}</h1>
              </div>
              <div className="absolute left-51 top-1">
-                <h1 className="max-w-45 text-2xl font-semibold break-all">{text2}</h1>
+                <h1 className="max-w-45 text-2xl font-semibold break-all">{text2|| "Text"}</h1>
              </div>
                
                     <img src={templates26} className="h-100" alt="" />

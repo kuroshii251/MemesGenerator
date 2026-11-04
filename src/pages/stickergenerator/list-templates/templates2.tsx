@@ -38,10 +38,10 @@ export default function StickerTemplates2() {
             <div className="flex flex-1 flex-col space-y-10 justify-center items-center">
                 <div className="col relative" ref={stickerPhoto}>
              <div className="absolute left-3 top-3  ">
-                <h3 className="w-100  font-extrabold break-all text-3xl">{text}</h3>
+                <h3 className="w-100  font-extrabold break-all text-3xl">{text|| "Text"}</h3>
              </div>
                 <div className="absolute left-3 top-80  ">
-                <h3 className="w-100  font-extrabold break-all text-3xl">{text2}</h3>
+                <h3 className="w-100  font-extrabold break-all text-3xl">{text2|| "Text"}</h3>
              </div>
                     <img src={templates2} className="h-100" alt="" />
                 </div>

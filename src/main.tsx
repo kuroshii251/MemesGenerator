@@ -51,6 +51,7 @@ import StickerTemplates15 from './pages/stickergenerator/list-templates/template
 import StickerTemplates14 from './pages/stickergenerator/list-templates/templates14.tsx'
 import StickerTemplates13 from './pages/stickergenerator/list-templates/templates13.tsx'
 import StickerTemplates12 from './pages/stickergenerator/list-templates/templates12.tsx'
+import ContactPage from './pages/contact/main.tsx'
 
 
 
@@ -107,6 +108,8 @@ createRoot(document.getElementById('root')!).render(
       <Route path='/sticker-generator/13' element={<StickerTemplates13/>} />
       <Route path='/sticker-generator/14' element={<StickerTemplates14/>} />
       <Route path='/sticker-generator/15' element={<StickerTemplates15/>} />
+      <Route path='/contact' element={<ContactPage/>} />
+
 
 
 

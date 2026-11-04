@@ -37,40 +37,43 @@ export default function Templates9Page() {
     return (
         <>
         <Navbar/>
-        <div className="justify-between items-center flex h-screen">
+        <div className="justify-between items-center flex  min-h-screen">
             <div className="col lg:flex flex-1 justify-center gap-10 items-center">
                 <div className="col relative" ref={imageRef}>
              <div className="absolute left-3 top-60">
-                <h3 className="w-30  font-extrabold text-white break-all text-2xl">{text1}</h3>
+                <h3 className="w-30  font-extrabold text-white break-all text-2xl">{text1|| "Text"}</h3>
              </div>
                <div className="absolute left-35 top-60">
-                <h3 className="max-w-30 break-all text-white font-extrabold text-2xl">{text2}</h3>
+                <h3 className="max-w-30 break-all text-white font-extrabold text-2xl">{text2|| "Text"}</h3>
              </div>
 
                 <div className="absolute left-70 top-60">
-                <h3 className="max-w-30 break-all text-white font-extrabold text-2xl">{text3}</h3>
+                <h3 className="max-w-30 break-all text-white font-extrabold text-2xl">{text3|| "Text"}</h3>
              </div>
-                    <img src={templates9} className="w-100 h-100" alt="" />
+                    <img src={templates9} className="w-100 h-100 mx-auto" alt="" />
                 </div>
                 <div className="">
-                    <div className="col bg-zinc-950 p-3 w-100 h-100 rounded-lg">
-                        <div className="flex flex-1 h-80 align-items-center items-center justify-center">
+                      <div className="justify-between items-center flex min-h-screen">
+            <div className="flex flex-col lg:flex-row flex-1 justify-center gap-10 items-center">
                              <form action="" method="POST">
-                            <div className="">
+                               <div className="grid grid-cols-2 p-3 gap-5">
+                            <div className="mt-5">
                             <p className="font-semibold text-white text-2 mb-3">Text 1</p>
-                            <input type="text" onChange={(e) => setText1(e.target.value)} className="shadow shadow-black bg-white hover:ring-black text-black rounded-lg p-3 w-70" />
+                            <input type="text" onChange={(e) => setText1(e.target.value)} className="shadow shadow-black bg-white hover:ring-black text-black rounded-lg p-3 w-50" />
                             </div>
                             <div className="mt-5">
                                 <p className="font-semibold mb-3 text-white ">Text 2</p>
-                             <input type="text" onChange={(e) => setText2(e.target.value)} className="shadow shadow-black bg-white text-black rounded-lg p-3 w-70 hover:ring-black"/>
+                             <input type="text" onChange={(e) => setText2(e.target.value)} className="shadow shadow-black bg-white text-black rounded-lg p-3 w-50 hover:ring-black"/>
                             </div>
 
                               <div className="mt-5">
                                 <p className="font-semibold mb-3 text-white ">Text 3</p>
-                             <input type="text" onChange={(e) => setText3(e.target.value)} className="shadow shadow-black bg-white text-black rounded-lg p-3 w-70 hover:ring-black"/>
+                             <input type="text" onChange={(e) => setText3(e.target.value)} className="shadow shadow-black bg-white text-black rounded-lg p-3 w-50 hover:ring-black"/>
                             </div>
-                              <div className="pt-7">
-                            <button className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
+                            
+                            </div>
+                              <div className="pt-7 p-3">
+                            <button className="text-black poppins w-100 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
                             </div>
                         </form>
                         </div>               

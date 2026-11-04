@@ -46,26 +46,26 @@ export default function Templates28Page() {
     return (
         <>
         <Navbar/>
-        <div className="justify-between items-center flex h-screen">
-            <div className="col lg:flex flex-1 justify-center gap-10 items-center">
+   <div className="justify-between items-center flex min-h-screen">
+            <div className="flex flex-col lg:flex-row flex-1 justify-center gap-10 items-center">
                 <div className="col relative" ref={imageRef}>
                     <div className="absolute left-2 top-32">
-                <h3 className="max-w-40 break-all  font-extrabold text-lg">{text1}</h3>
+                <h3 className="max-w-40 break-all  font-extrabold text-lg">{text1|| "Text"}</h3>
              </div>
              <div className="absolute left-47 top-12">
-                <h3 className="max-w-28 text-lg font-extrabold break-all">{text2}</h3>
+                <h3 className="max-w-28 text-lg font-extrabold break-all">{text2|| "Text"}</h3>
              </div>
 
   <div className="absolute left-3 top-75">
-                <h3 className="max-w-20 text-lg font-extrabold break-all">{text3}</h3>
+                <h3 className="max-w-20 text-lg font-extrabold break-all">{text3|| "Text"}</h3>
              </div>
 
               <div className="absolute left-25 top-75">
-                <h3 className="max-w-25 text-lg font-extrabold break-all">{text4}</h3>
+                <h3 className="max-w-25 text-lg font-extrabold break-all">{text4|| "Text"}</h3>
              </div>
 
               <div className="absolute left-60 top-55">
-                <h3 className="max-w-25 text-lg font-extrabold break-all">{text5}</h3>
+                <h3 className="max-w-25 text-lg font-extrabold break-all">{text5|| "Text"}</h3>
              </div>
 
             

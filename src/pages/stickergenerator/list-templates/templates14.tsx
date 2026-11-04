@@ -33,9 +33,9 @@ export default function StickerTemplates14() {
             <div className="flex flex-1 flex-col space-y-10 justify-center items-center">
                 <div className="col relative" ref={stickerPhoto}>
              <div className="absolute left-15 top-50  ">
-                <h3 className="w-80 text-center  font-extrabold break-all text-3xl">{text}</h3>
+                <h3 className="w-80 text-center  font-extrabold break-all text-3xl">{text|| "Text"}</h3>
              </div>
-                    <img src={templates14} className="h-100" alt="" />
+                    <img src={templates14} className="h-100 " alt="" />
                 </div>
                 <div className="">
                       <div className="col bg-zinc-950 p-5 w-auto  h-auto rounded-lg">

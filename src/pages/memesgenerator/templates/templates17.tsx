@@ -34,14 +34,14 @@ export default function Templates12Page() {
     return (
         <>
         <Navbar/>
-        <div className="justify-between items-center flex h-screen">
-            <div className="col lg:flex flex-1 justify-center gap-10 items-center">
+          <div className="justify-between items-center flex min-h-screen">
+            <div className="flex flex-col lg:flex-row flex-1 justify-center gap-10 items-center">
                 <div className="col relative" ref={imageRef}>
              <div className="absolute left-5 top-5">
-                <h1 className="w-90  font-semibold break-all text-xl">{text1}</h1>
+                <h1 className="w-90  font-semibold break-all text-xl">{text1|| "Text"}</h1>
              </div>
                <div className="absolute left-20 top-55">
-                <h3 className="max-w-60 break-all font-extrabold text-xl">{text2}</h3>
+                <h3 className="max-w-60 break-all font-extrabold text-xl">{text2|| "Text"}</h3>
              </div>
                     <img src={templates17} className="h-100" alt="" />
                 </div>

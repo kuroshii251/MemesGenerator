@@ -34,14 +34,14 @@ export default function Templates4Page() {
     return (
         <>
         <Navbar/>
-        <div className="justify-between items-center flex min-h-screen">
-          <div className="flex flex-col lg:flex-row flex-1 justify-center gap-10 items-center">
+       <div className="justify-between items-center flex min-h-screen">
+            <div className="flex flex-col lg:flex-row flex-1 justify-center gap-10 items-center">
                 <div className="col max-w-[400px] relative" ref={imageRef}> 
              <div className="absolute left-5 top-2">
-                <h3 className="max-w-80 font-bold break-all text-2xl text-white ">{text1}</h3>
+                <h3 className="max-w-80 font-bold break-all text-2xl text-white ">{text1 || "Text"}</h3>
              </div>
                <div className="absolute left-5 top-65  ">
-                <h3 className="max-w-80 break-all font-bold text-2xl text-white ">{text2}</h3>
+                <h3 className="max-w-80 break-all font-bold text-2xl text-white ">{text2|| "Text"}</h3>
              </div>
   <div className="mx-auto">
                     <img src={templates4} className="h-80 block" alt="" />

@@ -14,10 +14,7 @@ import templates12 from "../../assets/sticker/templates12.jpg";
 import templates13 from "../../assets/sticker/templates13.png";
 import templates14 from "../../assets/sticker/templates14.png";
 import templates15 from "../../assets/sticker/templates15.png";
-import templates16 from "../../assets/sticker/templates16.png";
-import templates17 from "../../assets/sticker/templates17.png";
-import templates18 from "../../assets/sticker/templates18.png";
-import templates19 from "../../assets/sticker/templates19.png";
+
 
 
 export default function StickerGeneratorPage()
@@ -36,20 +33,15 @@ export default function StickerGeneratorPage()
         {id: 12, imagess: templates12, link: "/sticker-generator/12"},
         {id: 13, imagess: templates13, link: "/sticker-generator/13"},
         {id: 14, imagess: templates14, link: "/sticker-generator/14"},
-        {id: 15, images: templates15, link: "/sticker-generator/15"},
-        {id: 16, imagess: templates16, link: "/sticker-generator/16"},
-        {id:17, imagess: templates17, link: "/sticker-generator/17"},
-        {id: 18, imagess: templates18, link: "/sticker-generator/18"},
-        {id: 19, imagess: templates19, link: "/sticker-generator/19"},
+        {id: 15, imagess: templates15, link: "/sticker-generator/15"},
     ];
     return (
         <>
         <Navbar/>
-        <div className="flex justify-center p-5 items-center">
-            <div className="">
-
-            </div>
-            <div className="grid grid-cols-3 space-x-5 space-y-5">
+        <div className="flex flex-col justify-center items-center min-h-screen">
+            <h1 className="text-3xl text-white text-center font-bold pt-10 pb-5">Sticker Generator</h1>
+            <p className="text-white text-lg flex justify-center mx-auto pb-20">Find the best sticker templates what you want</p>
+            <div className="grid lg:grid-cols-3 space-x-5 space-y-5">
                 {stickerData.map((items) => (
                     <div className="" key={items.id}>
                                     <div className="bg-zinc-900 p-4 h-95 w-80 rounded-md">

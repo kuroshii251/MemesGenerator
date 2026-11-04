@@ -35,12 +35,12 @@ export default function StickerTemplates10() {
             <div className="flex flex-1 flex-col space-y-10 justify-center items-center">
                 <div className="col relative" ref={stickerPhoto}>
              <div className="absolute top-3  ">
-                <h3 className="w-150 mx-auto text-center  font-bold break-all text-4xl">{text}</h3>
+                <h3 className="w-150 mx-auto text-center  font-bold break-all text-4xl">{text|| "Text"}</h3>
              </div>
               <div className="absolute top-70  ">
-                <h3 className="w-150 mx-auto text-center  font-bold break-all text-4xl">{text2}</h3>
+                <h3 className="w-150 mx-auto text-center  font-bold break-all text-4xl">{text2|| "Text"}</h3>
              </div>
-                    <img src={templates10} className="h-100" alt="" />
+                    <img src={templates10} className="h-100 p-5" alt="" />
                 </div>
                 <div className="">
                       <div className="col bg-zinc-950 p-5 w-auto  h-auto rounded-lg">

@@ -73,8 +73,8 @@ export default function MemeGeneratorPage(){
         <Navbar/>
         <div className="justify-center items-center min-h-screen">
             <h1 className="text-3xl text-white text-center font-bold pt-10 pb-5">Meme Generator</h1>
-            <p className="text-white text-lg flex justify-center w-150 mx-auto pb-20">Find the best meme templates for your content</p>
-            <div className="grid grid-cols-3 space-x-5 space-y-5 place-items-center">
+            <p className="text-white text-lg flex justify-center text-center mx-auto pb-20">Find the best meme templates for your content</p>
+            <div className="grid lg:grid-cols-3 space-x-5 space-y-5 place-items-center">
                {memeList.map((items) => (
                 <div className="" key={items.id}>
                       <div className="bg-zinc-900 p-4 h-95 w-80 rounded-md">
