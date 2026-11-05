@@ -16,19 +16,20 @@ export default function Templates25Page() {
     }
 
     const handleDownload =  () => {
-        toPng(imageRef.current, {cacheBust: true})
+        try {
+        toPng(imageRef.current, {cacheBust: true, skipFonts: true, imagePlaceholder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="})
         .then(dataImage => {
             const url = document.createElement('a');
             url.download = "memes.png";
             url.href= dataImage;
             url.click();
             window.location.reload();
-
-        }) .catch((err) => {
+        })
+        }catch(err) {
             console.error("Error", err);
             window.location.href="/error";
 
-        });
+        };
     };
 
     return (

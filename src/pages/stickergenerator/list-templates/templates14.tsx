@@ -11,8 +11,9 @@ export default function StickerTemplates14() {
     if(text.length === 20){
         alert("You have reached the word limit");
     }
-    const handleGenerate =  () => {
-        toPng(stickerPhoto.current, {cacheBust: true})
+   const handleGenerate =  () => {
+        try {
+        toPng(stickerPhoto.current, {cacheBust: true, skipFonts: true, imagePlaceholder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="})
         .then(dataImage => {
             const url = document.createElement('a');
             url.download = "sticker.png";
@@ -20,10 +21,12 @@ export default function StickerTemplates14() {
             url.click();
             window.location.reload();
 
-        }) .catch((err) => {
+        })
+        }
+       catch(err) {
             console.error("Error", err);
             window.location.href="/error";
-        });
+        };
     };
 
     return (
@@ -35,7 +38,7 @@ export default function StickerTemplates14() {
              <div className="absolute left-15 top-50  ">
                 <h3 className="w-80 text-center  font-extrabold break-all text-3xl">{text|| "Text"}</h3>
              </div>
-                    <img src={templates14} className="h-100 " alt="" />
+                    <img src={templates14} className="h-100     " alt="" />
                 </div>
                 <div className="">
                       <div className="col bg-zinc-950 p-5 w-auto  h-auto rounded-lg">

@@ -15,21 +15,21 @@ export default function Templates5Page() {
         alert("You have reached the word limit");
     }
 
-    const handleDownload =  () => {
-        toPng(imageRef.current, {cacheBust: true})
+ const handleDownload =  () => {
+        try {
+        toPng(imageRef.current, {cacheBust: true, skipFonts: true, imagePlaceholder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="})
         .then(dataImage => {
             const url = document.createElement('a');
             url.download = "memes.png";
             url.href= dataImage;
             url.click();
             window.location.reload();
-            
-
-        }) .catch((err) => {
+        })
+        }catch(err) {
             console.error("Error", err);
             window.location.href="/error";
 
-        });
+        };
     };
 
     return (
@@ -39,10 +39,10 @@ export default function Templates5Page() {
             <div className="flex flex-col lg:flex-row flex-1 justify-center gap-10 items-center">
                 <div className="col relative" ref={imageRef}>
              <div className="absolute left-5 top-5">
-                <h3 className="w-120 font-extrabold break-all text-3xl">{text1}</h3>
+                <h3 className="w-120 font-extrabold break-all text-3xl">{text1|| "Text"}</h3>
              </div>
                <div className="absolute left-5 top-80">
-                <h3 className="max-w-120 break-all font-extrabold text-3xl">{text2}</h3>
+                <h3 className="max-w-120 break-all font-extrabold text-3xl">{text2|| "Text"}</h3>
              </div>
                     <img src={templates5} className=" h-100 p-5" alt="" />
                 </div>

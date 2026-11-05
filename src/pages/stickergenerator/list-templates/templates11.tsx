@@ -10,8 +10,9 @@ export default function StickerTemplates11() {
     if(text.length === 56){
         alert("You have reached the word limit");
     }
-    const handleGenerate =  () => {
-        toPng(stickerPhoto.current, {cacheBust: true})
+       const handleGenerate =  () => {
+        try {
+        toPng(stickerPhoto.current, {cacheBust: true, skipFonts: true, imagePlaceholder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="})
         .then(dataImage => {
             const url = document.createElement('a');
             url.download = "sticker.png";
@@ -19,10 +20,12 @@ export default function StickerTemplates11() {
             url.click();
             window.location.reload();
 
-        }) .catch((err) => {
+        })
+        }
+       catch(err) {
             console.error("Error", err);
             window.location.href="/error";
-        });
+        };
     };
 
     return (
