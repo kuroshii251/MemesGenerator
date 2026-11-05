@@ -38,10 +38,10 @@ export default function Templates11Page() {
             <div className="flex flex-col lg:flex-row flex-1 justify-center gap-10 items-center">
                 <div className="col relative" ref={imageRef}>
              <div className="absolute left-10 top-30">
-                <h3 className="w-40 text-white  font-extrabold break-all text-xl">{text1}</h3>
+                <h3 className="w-40 text-white  font-extrabold break-all text-xl">{text1|| "Text"}</h3>
              </div>
                <div className="absolute left-30 top-60">
-                <h3 className="max-w-42 text-white break-all font-extrabold text-xl">{text2}</h3>
+                <h3 className="max-w-42 text-white break-all font-extrabold text-xl">{text2|| "Text"}</h3>
              </div>
                     <img src={templates11} className=" h-100" alt="" />
                 </div>
