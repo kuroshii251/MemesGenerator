@@ -28,6 +28,7 @@ export default function Templates28Page() {
     }
 
     const handleDownload =  () => {
+        if(!imageRef.current) return;
         toPng(imageRef.current, {cacheBust: true})
         .then(dataImage => {
             const url = document.createElement('a');

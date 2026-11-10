@@ -25,6 +25,7 @@ export default function Templates2Page() {
     }
 
       const handleDownload =  () => {
+        if(!imageRef.current) return;
         toPng(imageRef.current, {cacheBust: true})
         .then(dataImage => {
             const url = document.createElement('a');

@@ -18,6 +18,7 @@ export default function Templates7Page() {
     }
 
     const handleDownload =  () => {
+        if(!imageRef.current) return;
         toPng(imageRef.current, {cacheBust: true})
         .then(dataImage => {
             const url = document.createElement('a');
@@ -81,7 +82,7 @@ export default function Templates7Page() {
 
                         
                               <div className="pt-7 p-3">
-                            <button className="text-black poppins w-108 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
+                            <button type="button" className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
                             </div>
                         </form>
                         </div>               

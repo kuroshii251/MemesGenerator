@@ -27,10 +27,6 @@ export default function Navbar(){
 
                     </div>
 
-                    <div className="lg:mt-0 mt-3">
-                       <a href="/sticker-generator" className="text-white font-semibold">Sticker Generator</a>
-
-                    </div>
 
                      <div className="lg:mt-0 mt-3">
                        <a href="/contact" className="text-white font-semibold">Contact</a>

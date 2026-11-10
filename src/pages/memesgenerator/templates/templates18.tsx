@@ -10,6 +10,7 @@ export default function Templates12Page() {
 
 
     const handleDownload =  () => {
+        if(!imageRef.current) return;
         toPng(imageRef.current, {cacheBust: true})
         .then(dataImage => {
             const url = document.createElement('a');
@@ -43,7 +44,7 @@ export default function Templates12Page() {
                             <input type="file" onChange={(e) => setFile1(URL.createObjectURL(e.target.files[0]))} className="shadow shadow-black bg-white hover:ring-black text-black rounded-lg p-3 w-70" />
                             </div>
                               <div className="pt-7">
-                            <button className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
+                            <button type="button" className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
                             </div>
                         </form>
                         </div>               

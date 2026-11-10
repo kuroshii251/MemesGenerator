@@ -17,9 +17,8 @@ export default function StickerTemplates2() {
 
 
   const handleGenerate =  async() => {
-      if(!stickerPhoto){
-            return;
-        }
+        if(!stickerPhoto.current) return;
+
         try {
         toPng(stickerPhoto.current, {cacheBust: true})
         .then(dataImage => {
@@ -65,7 +64,7 @@ export default function StickerTemplates2() {
                             <input type="text" onChange={(e) => setText2(e.target.value)} className="shadow shadow-black bg-white hover:ring-black text-black rounded-lg p-3 w-100" />
                             </div>
                               <div className="pt-7">
-                            <button className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleGenerate}>Generate</button>
+                            <button type="button" className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleGenerate}>Generate</button>
                             </div>
                         </form>
                         </div>               

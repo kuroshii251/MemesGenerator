@@ -22,23 +22,20 @@ export default function Templates6Page() {
         alert("You have reached the word limit");
     }
 
-const handleDownload =  async() => { 
-        if(!imageRef) {
-            return;
-        }
-        try {   
-             toPng(imageRef.current, {cacheBust: true})
-            .then(dataImage => { 
-              const url = document.createElement('a');            
-            url.download = "memes.png";             
-            url.href= dataImage;             
-            url.click();            
-             window.location.reload();         
-            })      
-        } catch(err) {             
-            console.error("Error", err);             
-            window.location.href="/error";          
-        };          
+   const handleDownload =  () => {
+        if(!imageRef.current) return;
+        toPng(imageRef.current, {cacheBust: true})
+        .then(dataImage => {
+            const url = document.createElement('a');
+            url.download = "memes.png";
+            url.href= dataImage;
+            url.click();
+            window.location.reload();
+        }) .catch((err) => {
+            console.error("Error", err);
+            window.location.href="/error";
+
+        });
     };
     return (
         <>
@@ -87,7 +84,7 @@ const handleDownload =  async() => {
                           
                             
                               <div className="pt-7">
-                            <button className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
+                            <button type="button" className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
                             </div>
                         </form>
                         </div>               

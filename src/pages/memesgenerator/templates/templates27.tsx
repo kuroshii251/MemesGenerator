@@ -8,6 +8,7 @@ export default function Templates27Page() {
     const [picture, setPicture]  = useState(null);
     const imageRef = useRef(null);
     const handleDownload =  () => {
+        if(!imageRef.current) return;
         toPng(imageRef.current, {cacheBust: true})
         .then(dataImage => {
             const url = document.createElement('a');
@@ -43,7 +44,7 @@ export default function Templates27Page() {
                             </div>
                            
                               <div className="pt-7">
-                            <button className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
+                            <button type="button" className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
                             </div>
                         </form>
                         </div>               

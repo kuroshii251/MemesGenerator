@@ -17,6 +17,7 @@ export default function Templates13Page() {
 
 
     const handleDownload =  () => {
+        if(!imageRef.current) return;
         toPng(imageRef.current, {cacheBust: true})
         .then(dataImage => {
             const url = document.createElement('a');
@@ -57,7 +58,7 @@ export default function Templates13Page() {
                              <input type="text" onChange={(e) => setText2(e.target.value)} className="shadow shadow-black bg-white text-black rounded-lg p-3 w-70 hover:ring-black"/>
                             </div>
                               <div className="pt-7">
-                            <button className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
+                            <button type="button" className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
                             </div>
                         </form>
                         </div>               
