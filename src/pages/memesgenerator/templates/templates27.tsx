@@ -7,24 +7,23 @@ import templates27 from "../../../assets/meme/template27.png"
 export default function Templates27Page() {
     const [picture, setPicture]  = useState(null);
     const imageRef = useRef(null);
-
-    const handleDownload =  () => {
-        try {
-        toPng(imageRef.current, {cacheBust: true, skipFonts: true, imagePlaceholder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="})
+const handleDownload =  async() => {
+    try {
+   toPng(imageRef.current, {cacheBust: true})
         .then(dataImage => {
             const url = document.createElement('a');
             url.download = "memes.png";
             url.href= dataImage;
             url.click();
             window.location.reload();
-        })
-        }catch(err) {
+        }) 
+    } catch(err) {
             console.error("Error", err);
             window.location.href="/error";
 
         };
+    
     };
-
     return (
         <>
         <Navbar/>

@@ -15,23 +15,23 @@ export default function Templates1Page() {
         alert("You have reached the word limit");
     }
 
-   const handleDownload =  () => {
-        try {
-        toPng(imageRef.current, {cacheBust: true, skipFonts: true, imagePlaceholder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="})
+const handleDownload =  async() => {
+    try {
+   toPng(imageRef.current, {cacheBust: true})
         .then(dataImage => {
             const url = document.createElement('a');
             url.download = "memes.png";
             url.href= dataImage;
             url.click();
             window.location.reload();
-        })
-        }catch(err) {
+        }) 
+    } catch(err) {
             console.error("Error", err);
             window.location.href="/error";
 
         };
+    
     };
-
     return (
         <>
         <Navbar/>
@@ -44,7 +44,7 @@ export default function Templates1Page() {
                <div className="absolute left-55 top-55">
                 <h1 className="max-w-40 break-all font-semibold text-xl">{text2 || "Text"}</h1>
              </div>
-                    <img src={templates1} className="w-100 h-100" alt="" />
+                    <img src={templates1} className="w-100 h-100" alt="" crossOrigin="anonymous" />
                 </div>
                 <div className="">
                     <div className="col bg-zinc-950 p-3 w-100 h-100 rounded-lg">
