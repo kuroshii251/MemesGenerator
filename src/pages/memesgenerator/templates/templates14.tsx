@@ -15,22 +15,20 @@ export default function Templates14Page() {
         alert("You have reached the word limit");
     }
 
-  const handleDownload =  async() => {
-    try {
-   toPng(imageRef.current, {cacheBust: true})
+
+    const handleDownload =  () => {
+        toPng(imageRef.current, {cacheBust: true})
         .then(dataImage => {
             const url = document.createElement('a');
             url.download = "memes.png";
             url.href= dataImage;
             url.click();
             window.location.reload();
-        }) 
-    } catch(err) {
+        }) .catch((err) => {
             console.error("Error", err);
             window.location.href="/error";
 
-        };
-    
+        });
     };
 
     return (

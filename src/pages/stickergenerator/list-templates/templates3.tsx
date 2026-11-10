@@ -12,6 +12,9 @@ export default function StickerTemplates3() {
         alert("You have reached the word limit");
     }
         const handleGenerate =  async() => {
+              if(!stickerPhoto){
+            return;
+        }
         try {
         toPng(stickerPhoto.current, {cacheBust: true})
         .then(dataImage => {

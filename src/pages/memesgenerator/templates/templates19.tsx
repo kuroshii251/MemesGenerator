@@ -9,22 +9,20 @@ export default function Templates12Page() {
     const imageRef = useRef(null);
 
 
-const handleDownload =  async() => {
-    try {
-   toPng(imageRef.current, {cacheBust: true})
+
+    const handleDownload =  () => {
+        toPng(imageRef.current, {cacheBust: true})
         .then(dataImage => {
             const url = document.createElement('a');
             url.download = "memes.png";
             url.href= dataImage;
             url.click();
             window.location.reload();
-        }) 
-    } catch(err) {
+        }) .catch((err) => {
             console.error("Error", err);
             window.location.href="/error";
 
-        };
-    
+        });
     };
 
     return (

@@ -32,7 +32,6 @@ export default function StickerTemplates11() {
             window.location.href="/error";
         };
     };
-
     return (
         <>
         <Navbar/>

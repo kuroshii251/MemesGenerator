@@ -7,22 +7,19 @@ import templates27 from "../../../assets/meme/template27.png"
 export default function Templates27Page() {
     const [picture, setPicture]  = useState(null);
     const imageRef = useRef(null);
-const handleDownload =  async() => {
-    try {
-   toPng(imageRef.current, {cacheBust: true})
+    const handleDownload =  () => {
+        toPng(imageRef.current, {cacheBust: true})
         .then(dataImage => {
             const url = document.createElement('a');
             url.download = "memes.png";
             url.href= dataImage;
             url.click();
             window.location.reload();
-        }) 
-    } catch(err) {
+        }) .catch((err) => {
             console.error("Error", err);
             window.location.href="/error";
 
-        };
-    
+        });
     };
     return (
         <>

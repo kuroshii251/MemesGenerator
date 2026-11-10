@@ -17,6 +17,9 @@ export default function StickerTemplates2() {
 
 
   const handleGenerate =  async() => {
+      if(!stickerPhoto){
+            return;
+        }
         try {
         toPng(stickerPhoto.current, {cacheBust: true})
         .then(dataImage => {

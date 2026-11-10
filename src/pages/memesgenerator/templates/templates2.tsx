@@ -24,22 +24,19 @@ export default function Templates2Page() {
         alert("You have reached the word limit");
     }
 
-const handleDownload =  async() => {
-    try {
-   toPng(imageRef.current, {cacheBust: true})
+      const handleDownload =  () => {
+        toPng(imageRef.current, {cacheBust: true})
         .then(dataImage => {
             const url = document.createElement('a');
             url.download = "memes.png";
             url.href= dataImage;
             url.click();
             window.location.reload();
-        }) 
-    } catch(err) {
+        }) .catch((err) => {
             console.error("Error", err);
             window.location.href="/error";
 
-        };
-    
+        });
     };
 
     return (
@@ -64,7 +61,7 @@ const handleDownload =  async() => {
                 <h1 className="max-w-40 break-all font-semibold text-xl">{text5 || "Text"}</h1>
              </div>
              <div className="mx-auto">
-                    <img src={templates2} className="h-130 block" alt="" />
+                    <img src={templates2} className="h-130 block" alt="" crossOrigin="anonymous"/>
 
              </div>
                 </div>
@@ -97,7 +94,7 @@ const handleDownload =  async() => {
                           
                             
                               <div className="pt-7">
-                            <button className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
+                            <button type="button" className="text-black poppins w-30 bg-orange-700 p-3 rounded-lg font-semibold" onClick={handleDownload}>Generate</button>
                             </div>
                         </form>
                         </div>               
