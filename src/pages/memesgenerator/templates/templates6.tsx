@@ -51,10 +51,10 @@ export default function Templates6Page() {
              </div>
 
                <div className="absolute left-65 top-18">
-                <h3 className="max-w-40 break-all font-extrabold text-xl">{text3}</h3>
+                <h3 className="max-w-40 break-all font-extrabold text-xl">{text3 || "Text"}</h3>
              </div>
                <div className="absolute left-20 top-75">
-                <h3 className="max-w-40 break-all font-extrabold text-xl">{text4}</h3>
+                <h3 className="max-w-40 break-all font-extrabold text-xl">{text4 || "Text"}</h3>
              </div>
                     <img src={templates6} className="h-100" alt="" />
                 </div>
